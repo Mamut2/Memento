@@ -159,7 +159,7 @@ fun <T> SwipeToDeleteContainer(
             if(value == SwipeToDismissBoxValue.StartToEnd){
                 coroutineScope.launch {
                     isRemoved = true
-                    delay(500)
+                    delay(animationDuration.toLong())
                     onDelete()
                 }
                 true
@@ -217,6 +217,4 @@ fun DeleteBackground(
                 .fillMaxHeight(),
         )
     }
-
-
 }
